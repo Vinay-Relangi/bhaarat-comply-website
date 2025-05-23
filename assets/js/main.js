@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -50,7 +50,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -120,9 +120,9 @@
 
   }
 
-  document.querySelectorAll('.countdown').forEach(function(countDownItem) {
+  document.querySelectorAll('.countdown').forEach(function (countDownItem) {
     updateCountDown(countDownItem);
-    setInterval(function() {
+    setInterval(function () {
       updateCountDown(countDownItem);
     }, 1000);
   });
