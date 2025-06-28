@@ -37,11 +37,14 @@
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
+  const navmenuList = document.querySelectorAll('#navmenu a');
+  navmenuList.forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
         mobileNavToogle();
       }
+      navmenuList.forEach(nav => nav.classList.remove('active'));
+      navmenu.classList.add('active');
     });
 
   });
